@@ -65,8 +65,13 @@ def data_dict_to_csv(data_dict):
     print(df.shape)
 
 
-data_dict = {'user': [], 'date': [], 'text': [], 'favorite_count': []}
-twython_access = init_twython_access()
-key_words = read_keywords_from_file('keywords.txt')
-search_for_keywords(key_words, twython_access, data_dict)
-data_dict_to_csv(data_dict)
+def main():
+    data_dict = {'user': [], 'date': [], 'text': [], 'favorite_count': []}
+    twython_access = init_twython_access()
+    key_words = read_keywords_from_file('keywords.txt')
+    search_for_keywords(key_words, twython_access, data_dict)
+    data_dict_to_csv(data_dict)
+
+
+if __name__ == "__main__":
+    main()
