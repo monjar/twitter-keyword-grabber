@@ -1,2 +1,4 @@
 .env
 twitter_credentials.json
+keywords.txt
+data.csv
